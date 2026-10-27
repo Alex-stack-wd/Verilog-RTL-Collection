@@ -48,7 +48,7 @@ The design continuously processes incoming 8-bit ASCII characters (`data_in[7:0]
 The design was verified through behavioral simulation using Xilinx Vivado Simulator.
 
 ### Simulation Waveform Analysis
-![Password Checker Simulation Waveform](Password_Checker_simulation.png)
+
 
 * **Password Match Assertion:** Upon receiving the sequence `0x3D` (`=`), `0x6C` (`l`), `0x65` (`e`), `0x78` (`x`), `0x3D` (`=`), the FSM transitions to state 6 and pulse-asserts `check = 1` (between 60 ns and 80 ns).
 * **Data Demultiplexing:** Consonants are correctly split to `consonants[7:0]` (`0x6C`, `0x65`, `0x78`), while vowel/boundary symbols are isolated to `vowels[7:0]` (`0x3D`).
